@@ -1,0 +1,91 @@
+/* 🌟 モダン & クリーンなスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* 左寄せ */
+    align-items: center;
+	padding-left: 5%; /* ここで左側のマージンを調整 */
+	padding-top: 8%; /* ここで上のマージンを調整 */
+	padding-bottom: 5%; /* ここで下のマージンを調整 */
+}
+
+/* 🌟 コンテンツを中央配置 */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+/* 🌟 見出し */
+h2 {
+    text-align: center;
+    color: #444;
+}
+
+/* 🌟 フォームデザイン */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 🌟 ラベル */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 🌟 入力フィールド */
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* 🌟 ボタンデザイン */
+.btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* 🌟 エラーメッセージ */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: none;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0%;
+    background-color: #4caf50;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    transition: width 0.2s;
+}

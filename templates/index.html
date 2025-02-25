@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Evaluator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<style>
+        body {
+            background-image: url("{{ background_image }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Evaluate Images</h2>
+        
+        <form id="model-form">
+            <label for="model-folder">Model Folder:</label>
+            <button type="submit" class="btn">Load Models</button>
+        </form>
+
+        <div id="models"></div>
+
+        <form id="evaluation-form">
+            <label for="image-folder">Image Folder:</label>
+            <input type="text" id="image-folder" name="image_folder" value="/folder">
+            
+            <label for="output-folder">Output Folder:</label>
+            <input type="text" id="output-folder" name="output_folder" value="/folder">
+
+			<label for="threshold">Threshold:</label>
+			<input type="number" id="threshold" name="threshold" step="0.01" min="0" max="1" value="0.5">
+					   
+            <div id="model-weights"></div>
+            
+            <p id="weight-error" class="error-message">Total weight must be exactly 100%</p>
+            
+            <button type="submit" id="evaluate-button" class="btn" disabled>Evaluate</button>
+			<div class="progress-container">
+				<div class="progress-bar" id="progress-bar"></div>
+			</div>
+			<p id="progress-text">Waiting for evaluation...</p>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
